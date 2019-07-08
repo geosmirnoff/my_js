@@ -7,7 +7,7 @@ function binSearch(list, item) {
 	
 	while (low <= high) {
 		
-		var mid = Math.floor((low + high) / 2);
+		var mid = Math.round((low + high) / 2);
 		var guess = list[mid];
 		
 		if (guess == item) {
