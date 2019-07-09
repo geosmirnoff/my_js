@@ -10,21 +10,21 @@ function findSmallest(arr) {
 		}
 	}
 	
-	return smallestIndex + ': ' + smallest;
+	return smallestIndex;
 }
-
-console.log(findSmallest([5,3,6,2,10]));
 
 function selectionSort(arr) {
 	var newArr = [];
 	
-	for (var i = 0; i <= arr.length; i++) {
-		smallest = findSmallest(arr);
-		newArr.push(arr.pop(smallest));
-	}
-	return newArr;
+	//for (var i = 0; i <= arr.length; i++) {
+		var smallest = findSmallest(arr);
+		var del = arr.splice(smallest, 1);
+		console.log(del);
+		//newArr.push(smallest);
+	//}
+	//return newArr;
 }
 
-
+console.log(findSmallest([5,3,6,2,10]));//3
 console.log(selectionSort([5,3,6,2,10]));
 
